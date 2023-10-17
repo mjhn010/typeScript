@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-      "outDir": "ts",
-      "target": "ES6",
-      "module": "CommonJS",
-      "lib": ["es6"]
-    }
-  }
