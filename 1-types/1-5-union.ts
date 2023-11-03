@@ -27,7 +27,7 @@ type FailState = {
     }
 }
 type LoginState = SuccessState | FailState;
-function login():LoginState{
+function unionLogin():LoginState{ 
     return{
        response:{
         body:"login in",
@@ -35,7 +35,19 @@ function login():LoginState{
     }
 }
 
+let success:SuccessState;
+let fail:FailState;
+
 //printLoginState(state)
 //success -> body
 //fail -> reason
+function unionPrintLoginState(state:LoginState){
+    if('response' in state){
+        console.log(state.response.body)
+    }else{
+        console.log(state.reason.body);
+        
+    }
+}
+
 }
