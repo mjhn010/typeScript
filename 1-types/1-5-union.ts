@@ -1,7 +1,7 @@
 
 {
 /**
- * Union Types: OR
+ * Union Types: 또는 OR
  */
 
 type Direction = 'left' | 'right' | "up" | 'down';

@@ -18,7 +18,7 @@
     }
     const numbers = findNumbers()!;
     numbers.push(2);
-
+    // ! == 100% 확신한다 무조건 내가 선언하는 값이 맞다라는 의미.
     const button = document.querySelector('class');
 
 

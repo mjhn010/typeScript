@@ -18,6 +18,7 @@ function interWork(person:Student & Worker){
     console.log(person.name, person.score, person.empolyeeId, person.work());
     
 }
+// 모든 값을 할당해야한다.
 interWork({
     name:'jun',
     score:1,
