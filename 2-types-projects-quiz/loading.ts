@@ -20,7 +20,37 @@
 
   type ResourceLoadState = LoadingState | SuccessState | FailState;
 
-  printLoginState({ state: 'loading' }); // 👀 loading...
-  printLoginState({ state: 'success', response: { body: 'loaded' } }); // 😃 loaded
-  printLoginState({ state: 'fail', reason: 'no network' }); // 😱 no network
+  //if
+  // function printLoginState2(resourceLoadState:ResourceLoadState){
+  //   if(resourceLoadState.state == 'loading'){
+  //     return console.log("loading...")
+  //   }else if(resourceLoadState.state == 'success'){
+  //     return console.log(resourceLoadState.response.body)
+  //   }else{
+  //     return console.log(resourceLoadState.reason)
+  //   }
+
+
+  // }
+
+  //swich
+  function printLoginState2(state:ResourceLoadState){
+    switch(state.state){
+      case "loading":
+        return console.log('loading...')
+        break;
+      case 'success':
+        return console.log(state.response.body)
+        break;
+      case 'fail':
+        return console.log(state.reason);
+        break;
+        default:
+          throw new Error('error');
+    }
+  }
+
+  printLoginState2({ state: 'loading' }); // 👀 loading...
+  printLoginState2({ state: 'success', response: { body: 'loaded' } }); // 😃 loaded
+  printLoginState2({ state: 'fail', reason: 'no network' }); // 😱 no network
 }
